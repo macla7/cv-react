@@ -8,40 +8,26 @@ class BasicTile extends Component {
 
     this.state = {
       items: [],
-      item: {
-        key: uniqid(),
-        text: "",
-        editing: true,
-      },
     };
 
     this.handleNewItem = this.handleNewItem.bind(this);
-    this.handleBlurItem = this.handleBlurItem.bind(this);
+    this.handleDeleteItem = this.handleDeleteItem.bind(this);
   }
 
   handleNewItem() {
     this.setState({
-      items: [...this.state.items, this.state.item],
-      item: {
-        key: uniqid(),
-        text: "",
-        editing: true,
-      },
+      items: [...this.state.items, uniqid()],
     });
   }
 
-  handleBlurItem(key, text) {
+  handleDeleteItem(key) {
     console.log(this.state.items);
+    console.log(key);
     this.setState({
-      items: this.state.items.map((item) => {
-        if (item.key === key) {
-          item.text = text;
-          item.editing = false;
-        }
-        return item;
+      items: this.state.items.filter((item) => {
+        return item !== key;
       }),
     });
-    console.log(this.state.items);
   }
 
   render() {
@@ -54,14 +40,7 @@ class BasicTile extends Component {
         case "qualifications":
         case "languages":
           return (
-            <Editable
-              key={item.key}
-              editing={item.editing}
-              handleBlur={this.handleBlurItem}
-              id={item.key}
-              tag="div"
-              text={item.text}
-            />
+            <Editable key={item} id={item} handleDel={this.handleDeleteItem} />
           );
         default:
           return <div>Error</div>;

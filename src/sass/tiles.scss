@@ -6,6 +6,21 @@
 
 .editable {
   border: 2px solid brown;
-  padding: 0.5rem;
   margin: 0.1rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+
+  span {
+    padding: 0.3rem;
+    display: none;
+
+    font-size: 80%;
+    color: white;
+    background-color: #900;
+    border-radius: 0 0 5px 5px;
+  }
+
+  .error-active {
+    display: block;
+  }
 }
