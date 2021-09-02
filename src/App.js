@@ -1,14 +1,16 @@
 import React, { Component } from "react";
-import BasicTile from "./components/BasicTile";
+import HeaderTile from "./components/HeaderTile.js";
+import ListTile from "./components/ListTile";
 import "./styles.scss";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <BasicTile title="Contact Details" type="contacts" />
-        <BasicTile title="Qualifications" type="qualifications" />
-        <BasicTile title="Languages" type="languages" />
+        <HeaderTile />
+        <ListTile title="Contact Details" type="contacts" />
+        <ListTile title="Qualifications" type="qualifications" />
+        <ListTile title="Languages" type="languages" />
       </div>
     );
   }

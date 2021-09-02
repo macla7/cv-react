@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Editable from "./Editable";
 import uniqid from "uniqid";
 
-class BasicTile extends Component {
+class ListTile extends Component {
   constructor(props) {
     super(props);
 
@@ -40,7 +40,13 @@ class BasicTile extends Component {
         case "qualifications":
         case "languages":
           return (
-            <Editable key={item} id={item} handleDel={this.handleDeleteItem} />
+            <Editable
+              key={item}
+              id={item}
+              handleDel={this.handleDeleteItem}
+              hasDelete={true}
+              tag="div"
+            />
           );
         default:
           return <div>Error</div>;
@@ -48,7 +54,7 @@ class BasicTile extends Component {
     });
 
     return (
-      <section className="basicTile">
+      <section className="listTile">
         <h2>{this.props.title}</h2>
         <div className="tile-arr">{arrItems}</div>
         <button onClick={this.handleNewItem}>+</button>
@@ -57,4 +63,4 @@ class BasicTile extends Component {
   }
 }
 
-export default BasicTile;
+export default ListTile;

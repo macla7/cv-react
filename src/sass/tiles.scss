@@ -1,31 +1,11 @@
-.basicTile {
-  border: 2px solid brown;
+.listTile {
+  border: 2px solid rgb(20, 110, 0);
   padding: 0.5rem;
   margin: 0.5rem;
 }
 
-.editable {
-  border: 2px solid brown;
-  margin: 0.1rem;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  cursor: pointer;
-
-  span {
-    padding: 0.3rem;
-    display: none;
-
-    font-size: 80%;
-    color: white;
-    background-color: #900;
-    border-radius: 0 0 5px 5px;
-  }
-
-  .error-active {
-    display: block;
-  }
-
-  button {
-    cursor: pointer;
-  }
+.headerTile {
+  border: 2px solid rgb(20, 110, 0);
+  padding: 0.5rem;
+  margin: 0.5rem;
 }

@@ -8,7 +8,6 @@ class Editable extends Component {
       id: this.props.id,
       text: "",
       editing: true,
-      tag: "div",
     };
 
     this.handleBlur = this.handleBlur.bind(this);
@@ -57,7 +56,6 @@ class Editable extends Component {
     console.log(container.firstChild);
     if (container.firstChild.value === "") {
       container.lastChild.classList.add("error-active");
-      container.firstChild.focus();
       return true;
     } else {
       container.lastChild.classList.remove("error-active");
@@ -77,14 +75,16 @@ class Editable extends Component {
             onBlur={this.handleBlur}
             value={text}
           />
-          <button onMouseDown={this.handleDel}>🗑</button>
-          <span>Cannot leave this blank plz</span>
+          {this.props.hasDelete && (
+            <button onMouseDown={this.handleDel}>🗑</button>
+          )}
+          <span>Don't leave blank plz</span>
         </div>
       );
     } else {
       return (
         <div className="editable" onClick={this.handleClick}>
-          <this.state.tag>{text}</this.state.tag>
+          <this.props.tag>{text}</this.props.tag>
         </div>
       );
     }
