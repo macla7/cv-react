@@ -9,6 +9,7 @@
   margin: 0.1rem;
   display: grid;
   grid-template-columns: 1fr auto;
+  cursor: pointer;
 
   span {
     padding: 0.3rem;
@@ -22,5 +23,9 @@
 
   .error-active {
     display: block;
+  }
+
+  button {
+    cursor: pointer;
   }
 }

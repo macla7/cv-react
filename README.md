@@ -1,3 +1,11 @@
+MY SECTION: NOTES.
+
+Stuggled with ages trying to figure out why my onClick button wasn't working. The problem seems to be that my onBlur before it was calling, then saving and doing setState, which then re-renders everything before the onClick.
+
+The set-state will re-render away my button with the onClick, so it's never called!
+
+Omg.. after like two hours of study later.. I finally found this <a href='https://stackoverflow.com/questions/12092261/prevent-firing-the-blur-event-if-any-one-of-its-children-receives-focus'>SO Post</a> explainging that onMouseDown calls before onBlur. Therefore, this solves my whole problem as now I can delete before my delete functionality is rendered away!
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -17,16 +17,18 @@ class Editable extends Component {
     this.handleDel = this.handleDel.bind(this);
   }
 
-  handleBlur(e) {
-    if (!this.isBlank(e)) {
-      this.save(e);
+  async handleBlur(e) {
+    const container = e.target.parentElement;
+    console.log(container);
+    if (!this.isBlank(container)) {
+      this.save(container.firstChild);
       this.lock();
     }
   }
 
-  save(e) {
+  save(input) {
     this.setState({
-      text: e.target.value,
+      text: input.value,
     });
   }
 
@@ -42,22 +44,23 @@ class Editable extends Component {
     });
   }
 
-  handleChange(e) {
-    this.isBlank(e);
-    this.save(e);
+  handleChange(event) {
+    this.isBlank(event.target.parentElement);
+    this.save(event.target);
   }
 
   handleDel() {
     this.props.handleDel(this.state.id);
   }
 
-  isBlank(e) {
-    if (e.target.value === "") {
-      e.target.parentElement.lastChild.classList.add("error-active");
-      e.target.focus();
+  isBlank(container) {
+    console.log(container.firstChild);
+    if (container.firstChild.value === "") {
+      container.lastChild.classList.add("error-active");
+      container.firstChild.focus();
       return true;
     } else {
-      e.target.parentElement.lastChild.classList.remove("error-active");
+      container.lastChild.classList.remove("error-active");
     }
   }
 
@@ -65,17 +68,18 @@ class Editable extends Component {
     const { editing, text } = this.state;
     if (editing) {
       return (
-        <form className="editable">
+        <div className="editable">
           <input
+            type="text"
             autoFocus
             required
-            onBlur={this.handleBlur}
             onChange={this.handleChange}
+            onBlur={this.handleBlur}
             value={text}
-          ></input>
-          <button onClick={this.handleDel}>🗑</button>
+          />
+          <button onMouseDown={this.handleDel}>🗑</button>
           <span>Cannot leave this blank plz</span>
-        </form>
+        </div>
       );
     } else {
       return (
