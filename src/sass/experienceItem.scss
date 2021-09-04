@@ -1,0 +1,28 @@
+.experienceItem {
+  border: 2px solid rgba(12, 71, 0, 0.5);
+  padding: 0.5rem;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  align-items: start;
+
+  button {
+    justify-self: end;
+    align-self: end;
+  }
+
+  > * {
+    padding: 0.3rem;
+    min-height: 3rem;
+
+    div,
+    h3 {
+      display: grid;
+      align-items: center;
+    }
+  }
+
+  .dateRange,
+  .dateInputRange {
+    grid-area: 1 / 2 / 3 / 3;
+  }
+}

@@ -65,8 +65,7 @@ class Editable extends Component {
     if (editing) {
       return (
         <div className="editable">
-          <input
-            type="text"
+          <this.props.type
             required
             autoFocus
             onChange={this.handleChange}
@@ -74,8 +73,10 @@ class Editable extends Component {
             value={text ? text : ""}
             placeholder={this.props.placeholder}
           />
-          {this.props.hasDelete && (
+          {this.props.hasDelete ? (
             <button onMouseDown={this.handleDel}>🗑</button>
+          ) : (
+            <div></div>
           )}
           <span>Don't leave blank plz</span>
         </div>

@@ -2,10 +2,27 @@
   border: 2px solid rgb(20, 110, 0);
   padding: 0.5rem;
   margin: 0.5rem;
+
+  > * {
+    margin: 0.4rem;
+  }
 }
 
-.headerTile {
+.headerTile,
+.profileTile,
+.avatarTile {
   border: 2px solid rgb(20, 110, 0);
   padding: 0.5rem;
   margin: 0.5rem;
+
+  img {
+    aspect-ratio: 1;
+    width: 100%;
+  }
+}
+
+.tile-arr {
+  > * {
+    margin: 0.3rem;
+  }
 }

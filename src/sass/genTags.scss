@@ -1,7 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
 h1 {
   font-size: 2rem;
 }
 
 h2 {
   font-size: 1.4rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+li {
+  list-style: none; /* Remove default bullets */
+}
+
+li::before {
+  content: "|"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: darkgreen; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: 0; /* Also needed for space (tweak if needed) */
 }

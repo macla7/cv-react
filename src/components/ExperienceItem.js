@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Editable from "./Editable";
 import DateRange from "./DateRange";
 
-class EducationItem extends Component {
+class ExperienceItem extends Component {
   constructor(props) {
     super(props);
 
@@ -20,7 +20,7 @@ class EducationItem extends Component {
           type="input"
           hasDelete={false}
           tag="h3"
-          placeholder="Name of Institution"
+          placeholder="Workplace.."
           editing={true}
         />
         <DateRange />
@@ -28,14 +28,14 @@ class EducationItem extends Component {
           type="input"
           hasDelete={false}
           tag="div"
-          placeholder="Qualification/Degree.."
+          placeholder="Position.."
           editing={true}
         />
         <Editable
-          type="input"
+          type="textarea"
           hasDelete={false}
           tag="div"
-          placeholder="Grade or GPA.."
+          placeholder="Description of Skills.."
           editing={true}
         />
 
@@ -45,4 +45,4 @@ class EducationItem extends Component {
   }
 }
 
-export default EducationItem;
+export default ExperienceItem;

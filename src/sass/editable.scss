@@ -1,5 +1,4 @@
 .editable {
-  margin: 0.3rem;
   display: grid;
   grid-template-columns: 1fr auto;
   cursor: pointer;
@@ -20,11 +19,5 @@
 
   button {
     cursor: pointer;
-  }
-
-  div {
-    border-left: 2px solid rgba(20, 110, 0, 0.5);
-    border-radius: 0 0 0 3px;
-    padding: 0.5rem;
   }
 }

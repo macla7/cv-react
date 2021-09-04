@@ -6,6 +6,7 @@ class HeaderTile extends Component {
     return (
       <div className="headerTile">
         <Editable
+          type="input"
           hasDelete={false}
           tag="h1"
           placeholder="First Name.."
@@ -13,6 +14,7 @@ class HeaderTile extends Component {
           editing={false}
         />
         <Editable
+          type="input"
           hasDelete={false}
           tag="h1"
           placeholder="Last Name.."
@@ -20,6 +22,7 @@ class HeaderTile extends Component {
           editing={false}
         />
         <Editable
+          type="input"
           hasDelete={false}
           tag="h2"
           placeholder="Job Title.."

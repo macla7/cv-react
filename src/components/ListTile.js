@@ -30,15 +30,17 @@ class ListTile extends Component {
   render() {
     const { items } = this.state;
 
-    const arrItems = items.map((item) => {
+    const arrItems = items.map((item, i) => {
       return (
         <this.props.itemType
+          type="input"
           key={item}
           id={item}
           handleDel={this.handleDeleteItem}
           hasDelete={true}
-          tag="div"
+          tag={this.props.tag}
           editing={true}
+          number={i}
         />
       );
     });
