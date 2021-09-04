@@ -6,8 +6,8 @@ class Editable extends Component {
 
     this.state = {
       id: this.props.id,
-      text: "",
-      editing: true,
+      text: this.props.text,
+      editing: this.props.editing,
     };
 
     this.handleBlur = this.handleBlur.bind(this);
@@ -18,7 +18,6 @@ class Editable extends Component {
 
   async handleBlur(e) {
     const container = e.target.parentElement;
-    console.log(container);
     if (!this.isBlank(container)) {
       this.save(container.firstChild);
       this.lock();
@@ -53,7 +52,6 @@ class Editable extends Component {
   }
 
   isBlank(container) {
-    console.log(container.firstChild);
     if (container.firstChild.value === "") {
       container.lastChild.classList.add("error-active");
       return true;
@@ -69,11 +67,12 @@ class Editable extends Component {
         <div className="editable">
           <input
             type="text"
-            autoFocus
             required
+            autoFocus
             onChange={this.handleChange}
             onBlur={this.handleBlur}
-            value={text}
+            value={text ? text : ""}
+            placeholder={this.props.placeholder}
           />
           {this.props.hasDelete && (
             <button onMouseDown={this.handleDel}>🗑</button>

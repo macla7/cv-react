@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Editable from "./Editable";
 import uniqid from "uniqid";
 
 class ListTile extends Component {
@@ -21,8 +20,6 @@ class ListTile extends Component {
   }
 
   handleDeleteItem(key) {
-    console.log(this.state.items);
-    console.log(key);
     this.setState({
       items: this.state.items.filter((item) => {
         return item !== key;
@@ -34,23 +31,16 @@ class ListTile extends Component {
     const { items } = this.state;
 
     const arrItems = items.map((item) => {
-      console.log(this.props.type);
-      switch (this.props.type) {
-        case "contacts":
-        case "qualifications":
-        case "languages":
-          return (
-            <Editable
-              key={item}
-              id={item}
-              handleDel={this.handleDeleteItem}
-              hasDelete={true}
-              tag="div"
-            />
-          );
-        default:
-          return <div>Error</div>;
-      }
+      return (
+        <this.props.itemType
+          key={item}
+          id={item}
+          handleDel={this.handleDeleteItem}
+          hasDelete={true}
+          tag="div"
+          editing={true}
+        />
+      );
     });
 
     return (
