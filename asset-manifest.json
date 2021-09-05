@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/macla7/cv-react.git/static/css/main.e0715215.chunk.css",
-    "main.js": "/macla7/cv-react.git/static/js/main.77ac1baf.chunk.js",
-    "main.js.map": "/macla7/cv-react.git/static/js/main.77ac1baf.chunk.js.map",
-    "runtime-main.js": "/macla7/cv-react.git/static/js/runtime-main.b8fa47b2.js",
-    "runtime-main.js.map": "/macla7/cv-react.git/static/js/runtime-main.b8fa47b2.js.map",
-    "static/js/2.f6d1bade.chunk.js": "/macla7/cv-react.git/static/js/2.f6d1bade.chunk.js",
-    "static/js/2.f6d1bade.chunk.js.map": "/macla7/cv-react.git/static/js/2.f6d1bade.chunk.js.map",
-    "index.html": "/macla7/cv-react.git/index.html",
-    "static/css/main.e0715215.chunk.css.map": "/macla7/cv-react.git/static/css/main.e0715215.chunk.css.map",
-    "static/js/2.f6d1bade.chunk.js.LICENSE.txt": "/macla7/cv-react.git/static/js/2.f6d1bade.chunk.js.LICENSE.txt"
+    "main.css": "/cv-react/static/css/main.e0715215.chunk.css",
+    "main.js": "/cv-react/static/js/main.77ac1baf.chunk.js",
+    "main.js.map": "/cv-react/static/js/main.77ac1baf.chunk.js.map",
+    "runtime-main.js": "/cv-react/static/js/runtime-main.50351181.js",
+    "runtime-main.js.map": "/cv-react/static/js/runtime-main.50351181.js.map",
+    "static/js/2.f6d1bade.chunk.js": "/cv-react/static/js/2.f6d1bade.chunk.js",
+    "static/js/2.f6d1bade.chunk.js.map": "/cv-react/static/js/2.f6d1bade.chunk.js.map",
+    "index.html": "/cv-react/index.html",
+    "static/css/main.e0715215.chunk.css.map": "/cv-react/static/css/main.e0715215.chunk.css.map",
+    "static/js/2.f6d1bade.chunk.js.LICENSE.txt": "/cv-react/static/js/2.f6d1bade.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.b8fa47b2.js",
+    "static/js/runtime-main.50351181.js",
     "static/js/2.f6d1bade.chunk.js",
     "static/css/main.e0715215.chunk.css",
     "static/js/main.77ac1baf.chunk.js"
