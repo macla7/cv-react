@@ -5,7 +5,7 @@ Stuggled with ages trying to figure out why my onClick button wasn't working. Th
 The set-state will re-render away my button with the onClick, so it's never called!
 
 Preview:
-<img href='cvPreview.png'>
+<img src='cvPreview.png'>
 
 Omg.. after like two hours of study later.. I finally found this <a href='https://stackoverflow.com/questions/12092261/prevent-firing-the-blur-event-if-any-one-of-its-children-receives-focus'>SO Post</a> explainging that onMouseDown calls before onBlur. Therefore, this solves my whole problem as now I can delete before my delete functionality is rendered away!
 
