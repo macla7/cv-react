@@ -9,7 +9,7 @@ class Profile extends Component {
         <Editable
           type="textarea"
           hasDelete={false}
-          tag="div"
+          tag="p"
           placeholder="Description of yourself your goals.."
           editing={true}
         />

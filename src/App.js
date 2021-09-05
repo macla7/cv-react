@@ -11,16 +11,21 @@ import "./styles.scss";
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Avatar />
-        <HeaderTile />
-        <ListTile itemType={Editable} title="Contact Details" tag="li" />
-        <ListTile itemType={Editable} title="Qualifications" tag="li" />
-        <ListTile itemType={Editable} title="Languages" tag="li" />
-        <Profile />
-        <ListTile itemType={EducationItem} title="Education" />
-        <ListTile itemType={ExperienceItem} title="Work Experience" />
-        <ListTile itemType={Editable} title="Skills" tag="li" />
+      <div className="app">
+        <div className="background"></div>
+        <section>
+          <Avatar />
+          <HeaderTile />
+          <ListTile itemType={Editable} title="Contact Details" tag="li" />
+          <ListTile itemType={Editable} title="Qualifications" tag="li" />
+          <ListTile itemType={Editable} title="Languages" tag="li" />
+        </section>
+        <section>
+          <Profile />
+          <ListTile itemType={EducationItem} title="Education" />
+          <ListTile itemType={ExperienceItem} title="Work Experience" />
+          <ListTile itemType={Editable} title="Skills" tag="li" />
+        </section>
       </div>
     );
   }
